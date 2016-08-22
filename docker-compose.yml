@@ -3,9 +3,9 @@ postgres:
   ports:
    - "5432:5432"
   environment:
-    POSTGRES_DB: seamap
-    POSTGRES_USER: seamap
-    POSTGRES_PASSWORD: seamap
+    POSTGRES_DB: osm
+    POSTGRES_USER: osm
+    POSTGRES_PASSWORD: osm
 import-osm:
   build: src/import-osm
   links:

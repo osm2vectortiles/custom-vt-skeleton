@@ -1,7 +1,7 @@
-# Open Sea Map Vector Tiles
+# Custom Vector Tiles from OpenStreetMap
 
-A skeleton to start open sea map vector tile development.
-This repos is meant to be transferred to the Open Sea Map organization.
+A skeleton to start custom vector tile development from OpenStreetMap.
+It contains an example mapping and source definition for buildings.
 
 ## Run Workflow
 
@@ -18,6 +18,11 @@ docker-compose up -d postgres
 ```
 
 Now download a OSM PBF extract and store it in the `./data` dir.
+
+```bash
+wget -P ./data https://s3.amazonaws.com/metro-extracts.mapzen.com/zurich_switzerland.osm.pbf
+```
+
 Import the OSM PBF.
 
 ```bash

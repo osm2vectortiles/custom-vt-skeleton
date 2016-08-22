@@ -1,17 +1,21 @@
+generalized_tables:
+  building_polygon_gen0:
+    source: building_polygon
+    sql_filter: ST_Area(geometry)>1700.000000
+    tolerance: 0.0
 tables:
-  beacon_cardinal:
-    type: point
+  building_polygon:
     fields:
     - name: osm_id
       type: id
     - name: geometry
-      type: geometry
+      type: validated_geometry
     - key: name
       name: name
       type: string
-    - key: seamark:beacon_cardinal:colour
-      name: colour
-      type: string
+    - name: type
+      type: mapping_value
     mapping:
-      seamark:type:
-      - beacon_cardinal
+      building:
+      - __any__
+    type: polygon
